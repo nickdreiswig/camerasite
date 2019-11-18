@@ -1,0 +1,253 @@
+header, #intro, .controls, #exposure, #img, .works, footer {
+  display: grid;
+  grid-template-columns:
+    minmax(5%, auto)
+    repeat(8, minmax(2em, 8em))
+    minmax(5%, auto)
+    ;
+  grid-column-gap: 3%;
+}
+
+h3 {
+  margin: 0;
+}
+
+h6 {
+  margin: 0;
+}
+
+p {
+  font-size: .5em;
+  font-family: 'Karla', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  background: white;
+}
+
+
+
+footer {
+  background: black;
+  color: white;
+  padding: 4em;
+}
+
+.controlstitle, .aperture, .shutter, .iso, .meter, .histo, .expo, .shoot-img, .meter-img, .histo-img, .cameraworks, .works-info, .diagram, .reverse-info, .reversetitle{
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+ .info {
+  grid-column: 2 / span 6;
+}
+
+
+@keyframes focus-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-800px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bck {
+  0% {
+    transform: translateZ(80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 640px) {
+
+body {
+  font-size: 100%;
+}
+
+
+
+  .logo {
+    grid-column: 2/ span 2;
+    font-size: 2em;
+    margin-top: 1em;
+  }
+
+
+  .content {
+    margin-top: 2em;
+    grid-column: 3 / span 2;
+    font-size: 4em;
+    line-height: .8;
+    animation: focus-in-expand-fwd 2s  both;
+    animation-timing-function: ;
+  }
+
+  .mainintro {
+    grid-column: 5 / span 3;
+    font-size: 3em;
+    line-height: 1.5;
+    grid-row: 2;
+    margin-bottom: 4em;
+    animation: fade-in-bck 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.7s both;
+  }
+
+
+  .controlstitle {
+    margin-top: 3em;
+    grid-column: 5 / span 6;
+    font-size: 3em;
+    text-align: ;
+
+  }
+
+  .cameraworks {
+    grid-column: 4/ span 6;
+    font-size: 3em;
+    margin-top: 3em;
+    text-align: r ;
+  }
+
+
+  .works-info {
+    grid-column: 5 / span 3;
+    font-size: 1.4em;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .diagram {
+    grid-column: 5 / span 6;
+    margin-top: 4em;
+    align-content: right;
+  }
+
+  .reversetitle {
+    grid-column: 5 / span 3;
+    font-size: 1.5em;
+    line-height: 1;
+    margin-top: 4em;
+  }
+
+  .reverse-info {
+    grid-column: 5 / span 3;
+    font-size: .9em;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .aperture{
+    grid-column: 2 / span 3;
+    font-size: 3em;
+    margin-top: 2em;
+  }
+
+  .aperture-info {
+    grid-column: 2 / span 2;
+    line-height: 1.5;
+    font-size: .44em;
+
+  }
+
+  .shutter {
+    grid-column: 7 / span 3;
+    font-size: 3em;
+    grid-row: 4;
+    margin-top: 3em;
+  }
+
+  .shutter-info {
+    line-height: 1.5;
+    font-size: .44em;
+
+  }
+
+  .iso {
+    grid-column: 2 / span 3;
+    font-size: 3em;
+    grid-row: 5;
+    margin-top: 3em;
+  }
+
+  .iso-info {
+    grid-column: 6 / span 2;
+    line-height: 1.5;
+    font-size: .44em;
+  }
+
+  .meter{
+    grid-column: 7 / span 3;
+    font-size: 3em;
+    grid-row: 4;
+    margin-top: 6em;
+    }
+
+  .histo {
+    grid-column: 2 / span 3;
+    font-size: 3em;
+    grid-row: 5;
+    margin-top: 6em;
+  }
+
+
+
+  .expo {
+    grid-column: 2 / span 3;
+    font-size: 3em;
+    grid-row: 6;
+    margin-top: 4em;
+  }
+
+  .histo-info {
+    line-height: 1.5;
+    font-size: .44em;
+
+  }
+
+  .histo-img {
+    grid-column: 7 / span 3;
+    grid-row: 5;
+    margin-top: 20em;
+  }
+
+  .meter-img {
+    grid-column: 2 / span 3;
+    grid-row: 4;
+    margin-top: 20em;
+  }
+
+  .shoot-img {
+    grid-column: 7 / span 3;
+    grid-row: 2;
+    margin-top: 9em;
+  }
+
+
+}
